@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LP_W6</title>
+  </head>
+  <body>
+    <button id="randomButton">Show Random Image</button>
+    <br />
+    <img id="randomImage" src="" alt="Random Image" width="500" height="343" />
+
+    <script>
+      const images = [
+        "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+      ];
+
+      const randomButton = document.getElementById("randomButton");
+      const randomImage = document.getElementById("randomImage");
+
+      randomButton.addEventListener("click", function () {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImageUrl = images[randomIndex];
+        randomImage.src = randomImageUrl;
+      });
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
